@@ -1,0 +1,10 @@
+{
+  "name": "gaurav-nepal-portfolio",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler pages dev ."
+  },
+  "devDependencies": {
+    "wrangler": "^4.30.0"
+  }
+}

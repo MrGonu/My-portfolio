@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>Gaurav Nepal — Structural Engineer</title>
+<meta name="description" content="Gaurav Nepal — Structures. Data. Engineering.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="cosmos"></canvas>
+<div id="blueprint-grid"></div>
+
+<!-- persistent theme toggle -->
+<button id="theme-toggle" aria-label="Toggle light and dark mode">
+  <span class="knob">
+    <svg id="toggle-icon" viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+  </span>
+</button>
+
+<!-- scroll progress rail -->
+<nav id="rail" aria-hidden="true"></nav>
+
+<div id="scroller">
+
+  <!-- ============================================================ HOME -->
+  <section class="panel" id="home">
+    <div class="panel-inner">
+      <div class="home-main">
+        <div class="live-badge"><span class="live-dot"></span> LIVE</div>
+        <h1 class="name-line">GAURAV NEPAL</h1>
+        <p class="tagline">Structures<span>.</span> Data<span>.</span> Engineering<span>.</span></p>
+
+        <div class="home-ctas">
+          <a href="#hgh" class="btn primary" data-nav>VIEW MY WORK →</a>
+          <a href="#manifesto" class="btn ghost" data-nav>ABOUT ME →</a>
+        </div>
+
+        <div class="readout" id="readout">
+          <button class="readout-toggle" id="readout-toggle">
+            <span>// TECHNICAL READOUT</span>
+            <svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="readout-body">
+            <p><b>FOCUS:</b> RCC / SEISMIC / FINITE ELEMENT MODELLING</p>
+            <p><b>CURRENTLY:</b> BUILDING + LEARNING</p>
+            <p><b>INTEREST:</b> STRUCTURAL DATA</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="widgets">
+        <div class="clock-wrap">
+          <svg class="clock-face" id="clock" viewBox="0 0 200 200"></svg>
+        </div>
+        <div class="clock-digital" id="clock-digital">--:--:-- <b>—</b></div>
+
+        <div class="weather-card" id="weather-card">
+          <svg class="weather-icon" id="weather-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <div class="weather-temp" id="weather-temp">--°</div>
+          <div class="weather-desc" id="weather-desc">Loading</div>
+          <div class="weather-loc" id="weather-loc">Locating…</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================== MANIFESTO -->
+  <section class="panel manifesto" id="manifesto">
+    <div class="panel-inner reveal">
+      <div class="eyebrow">Manifesto</div>
+      <blockquote>Engineering, to me, isn't just about making a structure pass a calculation.</blockquote>
+      <blockquote>It's about understanding the decisions behind it — how a load travels, how a structure responds to an earthquake, how drawings become something physical, and how computation can help us see patterns that aren't obvious at first glance.</blockquote>
+    </div>
+  </section>
+
+  <!-- ==================================================== ENGINEERING DNA -->
+  <section class="panel" id="dna">
+    <div class="panel-inner reveal">
+      <div class="eyebrow">Engineering DNA</div>
+      <h2 class="section-name" style="font-size:clamp(28px,4vw,48px)">Tools I build with</h2>
+      <div class="dna-grid" id="dna-grid"></div>
+    </div>
+  </section>
+
+  <!-- ================================================ CURRENTLY EXPLORING -->
+  <section class="panel" id="explore">
+    <div class="panel-inner reveal">
+      <div class="eyebrow">Currently Exploring</div>
+      <h2 class="section-name" style="font-size:clamp(28px,4vw,48px)">Where curiosity is pointed right now</h2>
+      <div class="explore-wrap">
+        <div class="curve-box">
+          <svg id="fragility-svg" viewBox="0 0 400 300" width="100%" height="100%"></svg>
+        </div>
+        <div class="explore-chips" id="explore-chips">
+          <button class="chip" data-idx="0"><b>01</b>Fragility curves</button>
+          <button class="chip" data-idx="1"><b>02</b>Seismic engineering</button>
+          <button class="chip" data-idx="2"><b>03</b>Non-linear analysis</button>
+          <button class="chip" data-idx="3"><b>04</b>Computational engineering</button>
+          <button class="chip" data-idx="4"><b>05</b>Structural data visualization</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================== HOW I GOT HERE -->
+  <section class="panel" id="hgh">
+    <div class="panel-inner reveal">
+      <div class="eyebrow">How I Got Here</div>
+      <h2 class="section-name" style="font-size:clamp(28px,4vw,48px)">Education &amp; experience</h2>
+      <div class="hgh-grid">
+        <div class="hgh-col">
+          <h4>Education</h4>
+          <div class="edu-item">
+            <div class="deg">B.E. Civil Engineering</div>
+            <div class="inst">Tribhuvan University</div>
+          </div>
+          <div class="edu-item">
+            <div class="deg">+2 (Higher Secondary)</div>
+            <div class="inst">Arniko Awasiya Secondary School</div>
+          </div>
+        </div>
+        <div class="hgh-col">
+          <h4>Experience — click to expand</h4>
+          <div id="timeline"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================== BEYOND ENGINEERING -->
+  <section class="panel" id="beyond">
+    <div class="panel-inner reveal">
+      <div class="eyebrow">Beyond Engineering</div>
+      <div class="beyond-grid">
+        <div class="beyond-text">
+          <h2 class="section-name" style="font-size:clamp(28px,4vw,48px)">Off the drawing board</h2>
+          <p>Engineering occupies a large part of how I think, but not all of it. I enjoy exploring technology, building things with code, learning new tools and occasionally disappearing down completely unnecessary technical rabbit holes.</p>
+
+          <div class="socials-row">
+            <a class="icon-btn" href="https://www.instagram.com/gauravv.nepal/" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+            </a>
+            <a class="icon-btn" href="https://github.com/MrGonu" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .26.18.58.69.48A10 10 0 0 0 12 2z"/></svg>
+            </a>
+            <a class="icon-btn" href="https://open.spotify.com/user/31rpakpde6kfolec7izktmpfbujq" target="_blank" rel="noopener" aria-label="Spotify">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9.5"/><path d="M7 10.2c3-1 7-.6 9.4.9M7.6 13.4c2.4-.8 5.6-.5 7.6.8M8.2 16.4c2-.6 4.4-.4 6 .6"/></svg>
+            </a>
+            <a class="icon-btn" href="https://www.reddit.com/user/y0ukn0wwh001/" target="_blank" rel="noopener" aria-label="Reddit">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="13.5" r="7.2"/><circle cx="8.6" cy="13.6" r="1"/><circle cx="15.4" cy="13.6" r="1"/><path d="M8.4 16.6c1.1.9 3 .9 4.1 0M15.5 8.2l1.7-2.4 2.3.9M12 6.3V3.9"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div class="spotify-card" id="spotify-card">
+            <div class="spotify-art">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" id="spotify-art-icon"><circle cx="12" cy="12" r="9.5"/><path d="M7 10.2c3-1 7-.6 9.4.9M7.6 13.4c2.4-.8 5.6-.5 7.6.8M8.2 16.4c2-.6 4.4-.4 6 .6"/></svg>
+            </div>
+            <div style="min-width:0; flex:1;">
+              <div class="spotify-status" id="spotify-status">Spotify</div>
+              <div class="spotify-track" id="spotify-track">Gaurav is offline on Spotify</div>
+              <div class="spotify-artist" id="spotify-artist"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================== CLOSING -->
+  <section class="panel closing" id="closing">
+    <div class="panel-inner reveal">
+      <div class="eyebrow">Let's Talk</div>
+      <h2 class="section-name">LET'S BUILD SOMETHING THAT STANDS.</h2>
+      <p class="lede">Whether it's a structural engineering opportunity, a research idea, a computational experiment, or simply an interesting engineering problem, I'd like to hear about it.</p>
+
+      <div class="closing-ctas">
+        <a class="btn primary" href="assets/Gaurav_Nepal_CV.pdf" download>DOWNLOAD CV ↓</a>
+        <a class="btn" href="https://www.linkedin.com/in/gaurav-nepal47" target="_blank" rel="noopener">LINKEDIN →</a>
+
+        <div class="email-pop">
+          <button class="btn" id="email-btn">EMAIL ME →</button>
+          <div class="email-menu" id="email-menu">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=npgaurav47@gmail.com" target="_blank" rel="noopener">Open in Gmail</a>
+            <a href="mailto:npgaurav47@gmail.com">Open in mail app</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================== FOOTER -->
+  <section class="panel" id="footer">
+    <div class="panel-inner">
+      <div class="footer-inner">
+        <div>
+          <div class="footer-name">GAURAV NEPAL</div>
+          <div class="footer-role">Structural Engineer</div>
+        </div>
+        <div class="footer-role" style="letter-spacing:0.14em;">STRUCTURES × DATA × ENGINEERING</div>
+        <div class="footer-right">
+          <div>Kathmandu, Nepal</div>
+          <div>© 2026 Gaurav Nepal</div>
+          <div>BUILT WITH PYTHON + CURIOSITY</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
